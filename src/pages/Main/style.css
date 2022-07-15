@@ -1,0 +1,126 @@
+.container {
+  height: 100vh;
+  width: 100VW;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.sidebar {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-between;
+
+
+  width: 224px;
+  background: linear-gradient(180deg, #000000 0%, rgba(15, 13, 15, 0.65) 100%);
+}
+
+.sidebar h1 {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 19px;
+  color: #FFFFFF;
+
+  margin-top: 20px;
+}
+
+.sidebar h1:hover {
+  transform: scale(1.05);
+}
+
+.sidebar button {
+  all: unset;
+  text-align: center;
+
+  background: #F0C551;
+
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 16px;
+  color: #FFFFFF;
+  border-radius: 6px;
+
+  width: 160px;
+  height: 52px;
+  margin-bottom: 47px;
+
+
+  cursor: pointer;
+}
+
+.sidebar button:hover {
+  opacity: 0.8;
+}
+
+.sidebar__logo {
+  margin-top: 24px;
+}
+
+.board {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+
+  width: 100%;
+  height: 100%;
+  padding: 132px 83px;
+
+  gap: 30px;
+}
+
+.card {
+  width: 100%;
+  height: 100%;
+
+  position: relative;
+}
+
+.card img {
+  width: 100%;
+  height: 100%;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+.card__front {
+  position: absolute;
+  backface-visibility: hidden;
+
+  transform: rotateY(-180deg);
+  transition: transform 0.3s ease;
+}
+
+.card__back {
+  position: absolute;
+  backface-visibility: hidden;
+  transition: transform 0.3s ease;
+}
+
+.flip .card__front {
+  transform: rotateY(0);
+}
+
+.flip .card__back {
+  transform: rotateY(180deg);
+}
+
+.congrats {
+  width: 100%;
+  height: 100%;
+  padding: 100px;
+}
+
+.congrats-container {
+  width: 100%;
+  height: 100%;
+}
